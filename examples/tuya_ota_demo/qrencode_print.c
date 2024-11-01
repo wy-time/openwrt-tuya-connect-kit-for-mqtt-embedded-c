@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "qrencode.h"
+#include <qrencode.h>
 
 static int casesensitive = 1;
 static int eightbit = 0;

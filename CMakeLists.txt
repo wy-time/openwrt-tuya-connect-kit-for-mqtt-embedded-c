@@ -19,6 +19,11 @@ add_compile_options( -g )
 # set(CMAKE_CXX_COMPILER arm-linux-androideabi-g++)
 add_definitions(-DLITTLE_ENDIAN=1)
 
+find_path(QRENCODE_INCLUDE_DIR NAMES qrencode.h)
+find_library(QRENCODE_LIBRARY_RELEASE qrencode)
+find_library(QRENCODE_LIBRARY_DEBUG qrencoded)
+set(QRENCODE_LIBRARIES ${QRENCODE_LIBRARY_RELEASE})
+
 # Do not allow in-source build.
 if( ${PROJECT_SOURCE_DIR} STREQUAL ${PROJECT_BINARY_DIR} )
     message( FATAL_ERROR "In-source build is not allowed. Please build in a separate directory, such as ${PROJECT_SOURCE_DIR}/build." )

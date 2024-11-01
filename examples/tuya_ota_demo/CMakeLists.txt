@@ -10,12 +10,13 @@ add_executable(
 target_link_libraries(
     ${DEMO_NAME}
     PUBLIC
+        ${QRENCODE_LIBRARIES}
         link_core
-        qrencode
 )
 
 target_include_directories(
     ${DEMO_NAME}
     PUBLIC
+        ${QRENCODE_INCLUDE_DIR}
         ${CMAKE_CURRENT_LIST_DIR}
 )

@@ -211,7 +211,7 @@ static void user_event_handler_on(tuya_iot_client_t* client, tuya_event_msg_t* e
     }
 }
 
-static user_dpcache_request_init(void)
+static void user_dpcache_request_init(void)
 {
     s_cache_dp.dp_num = 2;
     s_cache_dp.dp_arr = system_malloc(32);   
